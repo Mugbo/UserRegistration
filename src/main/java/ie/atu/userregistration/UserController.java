@@ -18,4 +18,9 @@ public class UserController {
     public String getUserInformation(@PathVariable("name") String name, @PathVariable("email") String email){
         return userService.UserInfo(name, email);
     }
+
+    @PostMapping("/registerUserBody")
+    public String registerUser(@RequestBody UserDetails userDetails){
+        return userService.UserInfoJSON(userDetails);
+    }
 }

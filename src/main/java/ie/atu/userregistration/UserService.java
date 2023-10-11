@@ -12,4 +12,8 @@ public class UserService {
 
         return "Name: " + name + " Email: " + email;
     }
+
+    public String UserInfoJSON(UserDetails user){
+        return "Congratulations " + user.getName() + " you have successfully registered using the email: " + user.getEmail();
+    }
 }
