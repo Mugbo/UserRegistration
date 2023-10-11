@@ -2,9 +2,7 @@ package ie.atu.userregistration;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -16,8 +14,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping
-    public String UserRegister(@RequestBody UserInformation userInformation){
-        return userService.UserInfo(userInformation);
+    @GetMapping("/registerUser/{name}/{email}")
+    public String getUserInformation(@PathVariable("name") String name, @PathVariable("email") String email){
+        return userService.UserInfo(userDetails);
     }
 }
