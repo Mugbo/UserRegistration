@@ -1,13 +1,11 @@
 package ie.atu.userregistration;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Service
 public class UserService {
 
     public String UserInfo(String name, String email){
