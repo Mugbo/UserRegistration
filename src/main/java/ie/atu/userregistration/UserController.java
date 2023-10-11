@@ -16,6 +16,6 @@ public class UserController {
 
     @GetMapping("/registerUser/{name}/{email}")
     public String getUserInformation(@PathVariable("name") String name, @PathVariable("email") String email){
-        return userService.UserInfo(userDetails);
+        return userService.UserInfo(name, email);
     }
 }
